@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.EntityColors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="EntityColors" Height="400" Width="500" Background="#2F384D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Substations: " Grid.Row="0" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox Name="cbSubColor"  SelectionChanged="cbSubColor_SelectionChanged" Grid.Row="0" Grid.Column="1" Width="100" Margin="10" Background="LightGray"></ComboBox>
+        <Image Grid.Row="0" Grid.Column="2" Width="50" Margin="10" Name="subImg" Stretch="Fill" />
+        <Button x:Name="subBrowse" Click="subBrowse_Click" Grid.Row="0" Grid.Column="3" Content="  Browse  " Background="LightGray" Margin="10"></Button>
+        
+        <Label Content="Nodes: " Grid.Row="1" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox x:Name="cbNodeColor" SelectionChanged="cbNodeColor_SelectionChanged" Grid.Row="1" Grid.Column="1" Width="100" Margin="10" Background="LightGray"/>
+        <Image Grid.Row="1" Grid.Column="2" Width="50" Margin="10" Name="nodeImg" Stretch="Fill" />
+        <Button x:Name="nodeBrowse" Click="nodeBrowse_Click" Grid.Row="1" Grid.Column="3" Content="  Browse  " Background="LightGray" Margin="10"></Button>
+        
+        <Label Content="Switches: " Grid.Row="2" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox x:Name="cbSwitchColor" SelectionChanged="cbSwitchColor_SelectionChanged"  Grid.Row="2" Grid.Column="1" Width="100" Margin="10" Background="LightGray"/>
+        <Image Grid.Row="2" Grid.Column="2" Width="50" Margin="10" Name="switchImg" Stretch="Fill" />
+        <Button x:Name="switchBrowse" Click="switchBrowse_Click" Grid.Row="2" Grid.Column="3" Content="  Browse  " Background="LightGray" Margin="10"></Button>
+        
+        <Button x:Name="submitColors" Click="submitColors_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Submit changes" Background="LightGray" Margin="10"></Button>
+        <Button x:Name="initialColors" Click="initialColors_Click" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Content="Initial" Background="LightGray" Margin="10"></Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.EditPolygonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="EditPolygonWindow" Height="500" Width="500" Background="#2F384D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="StrokeThickness: " Grid.Row="0" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <TextBox Name="polygonStrokeThickness"  Grid.Row="0" Grid.Column="1" Width="100" Margin="10" Background="LightGray"></TextBox>
+        <Label Content="Fill color: " Grid.Row="1" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox x:Name="polygonColors" SelectionChanged="polygonColors_SelectionChanged" Grid.Row="1" Grid.Column="1" Width="100" Margin="10" Background="LightGray"/>
+        <Label Content="Color opacity (%): " Grid.Row="2" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <TextBox x:Name="polygonOpacity" Grid.Row="2" Grid.Column="1" Width="100" Margin="10" Background="LightGray"></TextBox>
+        <Label Content="Stroke color: " Grid.Row="3" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox x:Name="polygonStrokeColors" SelectionChanged="polygonStrokeColors_SelectionChanged"  Grid.Row="3" Grid.Column="1" Width="100" Margin="10" Background="LightGray"/>
+        <Button x:Name="submitPolygon" Click="submitPolygon_Click" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Submit" Background="LightGray" Margin="10"></Button>
+    </Grid>
+</Window>

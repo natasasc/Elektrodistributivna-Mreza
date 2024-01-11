@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.TextWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="TextWindow" Height="400" Width="500" Background="#2F384D">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Label Content="Text: " Grid.Row="0" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <TextBox Name="text"  Grid.Row="0" Grid.Column="1" Width="100" Margin="10" Background="LightGray"></TextBox>
+        <Label Content="Text color: " Grid.Row="1" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <ComboBox x:Name="textColors" SelectionChanged="textColors_SelectionChanged" Grid.Row="1" Grid.Column="1" Width="100" Margin="10" Background="LightGray"/>
+        <Label Content="Text size: " Grid.Row="2" Grid.Column="0" Margin="10" Foreground="LightGray"></Label>
+        <TextBox Name="textSize"  Grid.Row="2" Grid.Column="1" Width="100" Margin="10" Background="LightGray"></TextBox>
+        <Button x:Name="submitText" Click="submitText_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Submit" Background="LightGray" Margin="10"></Button>
+    </Grid>
+</Window>
